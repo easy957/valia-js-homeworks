@@ -1,4 +1,15 @@
 const findLongestWord = function (string) {
+  const stringArray = string.split(" ");
+
+  let theLongestWord = "";
+
+  for (const word of stringArray) {
+    if (theLongestWord.length < word.length) {
+      theLongestWord = word;
+    }
+  }
+  return theLongestWord;
+
   // твой код
 };
 

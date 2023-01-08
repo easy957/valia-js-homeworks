@@ -1,4 +1,12 @@
 const formatString = function (string) {
+  const stringArray = string.split("");
+
+  if (stringArray.length < 40) {
+    return string;
+  }
+  stringArray.splice(40, stringArray.length, "...");
+  return stringArray.join("");
+
   // твой код
 };
 
