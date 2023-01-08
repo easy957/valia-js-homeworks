@@ -1,13 +1,6 @@
 const countTotalSalary = function (employees) {
-  let total = 0;
-  const salaries = Object.values(employees);
-  for (const salary of salaries) {
-    total += salary;
-  };
-
-  return total;
+  // твой код
 };
-
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
@@ -19,7 +12,7 @@ console.log(
     mango: 100,
     poly: 150,
     alfred: 80,
-  }),
+  })
 ); // 330
 
 console.log(
@@ -27,5 +20,5 @@ console.log(
     kiwi: 200,
     lux: 50,
     chelsy: 150,
-  }),
+  })
 ); // 400

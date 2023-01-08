@@ -1,21 +1,5 @@
-const findBestEmployee = function(employees) {
-  const names = Object.keys(employees);
-  let bestEmployee = {name:'', score: 0};
-  
-  for (const name of names) {
-    const employee = {
-      name,
-      score: employees[name]
-    }
-
-
-    if (employee.score > bestEmployee.score) {
-      bestEmployee = employee;
-    }
-
-  };
-  
-  return bestEmployee;
+const findBestEmployee = function (employees) {
+  // твой код
 };
 
 /*
@@ -27,7 +11,7 @@ console.log(
     david: 35,
     helen: 1,
     lorence: 99,
-  }),
+  })
 ); // lorence
 
 console.log(
@@ -35,7 +19,7 @@ console.log(
     poly: 12,
     mango: 17,
     ajax: 4,
-  }),
+  })
 ); // mango
 
 console.log(
@@ -44,5 +28,5 @@ console.log(
     david: 21,
     kiwi: 19,
     chelsy: 38,
-  }),
+  })
 ); // lux

@@ -3,8 +3,8 @@
  * Можно положить либо снять деньги со счета.
  */
 const Transaction = {
-  DEPOSIT: 'deposit',
-  WITHDRAW: 'withdraw',
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
 };
 
 /*
@@ -22,15 +22,7 @@ const account = {
    * Метод создает и возвращает объект транзакции.
    * Принимает сумму и тип транзакции.
    */
-  createTransaction(amount, type) {
-    const newTransaction = {
-      id: this.transactions.length,
-      type,
-      amount,
-    };
-
-    this.transactions.push(newTransaction);
-  },
+  createTransaction(amount, type) {},
 
   /*
    * Метод отвечающий за добавление суммы к балансу.
@@ -38,10 +30,7 @@ const account = {
    * Вызывает createTransaction для создания объекта транзакции
    * после чего добавляет его в историю транзакций
    */
-  deposit(amount) {
-    this.createTransaction(amount, Transaction.DEPOSIT);
-    this.balance += amount;
-  },
+  deposit(amount) {},
 
   /*
    * Метод отвечающий за снятие суммы с баланса.
@@ -52,55 +41,21 @@ const account = {
    * Если amount больше чем текущий баланс, выводи сообщение
    * о том, что снятие такой суммы не возможно, недостаточно средств.
    */
-  withdraw(amount) {
-    this.createTransaction(amount, Transaction.WITHDRAW);
-    this.balance -= amount;
-  },
+  withdraw(amount) {},
 
   /*
    * Метод возвращает текущий баланс
    */
-  getBalance() {
-    return this.balance;
-  },
+  getBalance() {},
 
   /*
    * Метод ищет и возвращает объект транзации по id
    */
-  getTransactionDetails(id) {
-    for (const transaction of this.transactions) {
-      if (id === transaction.id) {
-        return transaction;
-      }
-    }
-  },
+  getTransactionDetails(id) {},
 
   /*
    * Метод возвращает количество средств
    * определенного типа транзакции из всей истории транзакций
    */
-  getTransactionTotal(type) {
-    let total = 0;
-
-    for (const transaction of this.transactions) {
-      if (type === transaction.type) {
-        total += transaction.amount;
-      };
-    };
-    
-    return total;
-   },
+  getTransactionTotal(type) {},
 };
-
-
-account.deposit(23000);
-account.deposit(3000);
-account.withdraw(2000);
-account.withdraw(2000);
-account.deposit(10000);
-account.withdraw(200);
-account.withdraw(5000);
-console.log(account.transactions);
-console.log(account.getBalance());
-console.log(account.getTransactionDetails(1));
-console.log(account.getTransactionTotal('withdraw'));
