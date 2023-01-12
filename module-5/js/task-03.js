@@ -1,3 +1,28 @@
+class Storage {
+  constructor(items) {
+    this.items = items;
+  }
+
+  getItems() {
+    return this.items;
+  }
+
+  addItem(item) {
+    this.items.push(item);
+  }
+
+  removeItem(item) {
+    // if (this.items.includes(item)) {
+    //   this.items.splice(this.items.indexOf(item), 1);
+    // }
+    for (let i = 0; i < this.items.length; i++) {
+      if (item === this.items[i]) {
+        this.items.splice(i, 1);
+      }
+    }
+  }
+}
+
 const storage = new Storage([
   "Нанитоиды",
   "Пролонгер",
