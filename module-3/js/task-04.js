@@ -1,5 +1,12 @@
 const countTotalSalary = function (employees) {
   // твой код
+
+  let totalSalary = 0;
+  for (key in employees) {
+    totalSalary += employees[key];
+  }
+
+  return totalSalary;
 };
 
 /*

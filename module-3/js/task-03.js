@@ -1,5 +1,17 @@
 const findBestEmployee = function (employees) {
   // твой код
+
+  let bestValue = 0;
+  let bestEmployees = "";
+
+  for (const key in employees) {
+    if (employees[key] > bestValue) {
+      bestValue = employees[key];
+      bestEmployees = key;
+    }
+  }
+
+  return bestEmployees;
 };
 
 /*
